@@ -1,8 +1,8 @@
-baseurl = "http://www.example.com"
-title = "johndoe"
-theme = "hugo-coder"
-languagecode = "en"
-defaultcontentlanguage = "en"
+baseurl = "http://localhost:1313"
+title = "dump"
+theme = "coder"
+languagecode = "ja"
+defaultcontentlanguage = "ja"
 
 paginate = 20
 
@@ -14,11 +14,11 @@ disqusShortname = "yourdiscussshortname"
 style = "github-dark"
 
 [params]
-  author = "John Doe"
-  info = "Full Stack DevOps and Magician"
-  description = "John Doe's personal website"
+  author = "nk"
+  info = ""
+  description = "Personal website"
   keywords = "blog,developer,personal"
-  avatarurl = "images/avatar.jpg"
+  #avatarurl = "images/avatar.jpg"
   #gravatar = "john.doe@example.com"
 
   faviconSVG = "/img/favicon.svg"
@@ -44,18 +44,13 @@ style = "github-dark"
   name = "Github"
   icon = "fa-brands fa-github fa-2x"
   weight = 1
-  url = "https://github.com/johndoe/"
-[[params.social]]
-  name = "Gitlab"
-  icon = "fa-brands fa-gitlab fa-2x"
-  weight = 2
-  url = "https://gitlab.com/johndoe/"
+  url = "https://github.com/kknnkknn/"
 
 # Menu links
 [[menu.main]]
   name = "Blog"
   weight = 1
-  url  = "article/"
+  url  = "/article/"
 [[menu.main]]
   name = "About"
   weight = 2
