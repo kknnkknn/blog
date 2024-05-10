@@ -22,10 +22,10 @@ one = "1分で読めます"
 other = "{{ .Count }}分で読めます"
 
 [page_not_found]
-other = "ページが見つかりません"
+other = ""
 
 [page_does_not_exist]
-other = "申し訳ございません。アクセスしようとしたページが見つかりませんでした。"
+other = ""
 
 [head_back]
 other = "<a href=\"{{ . }}\">トップページ</a>からお探しいただきますようお願い申し上げます。"
@@ -34,7 +34,7 @@ other = "<a href=\"{{ . }}\">トップページ</a>からお探しいただき�
 other = "Licensed under"
 
 [powered_by]
-other = "Powered by"
+other = ""
 
 [see_also]
 other = "関連記事："

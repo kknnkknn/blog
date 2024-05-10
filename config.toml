@@ -1,14 +1,14 @@
 baseurl = "http://localhost:1313"
-title = "dump"
+title = "___"
 theme = "coder"
 languagecode = "ja"
 defaultcontentlanguage = "ja"
 
 paginate = 20
+colorScheme = "auto"
 
 [services]
 [services.disqus]
-disqusShortname = "yourdiscussshortname"
 
 [markup.highlight]
 style = "github-dark"
@@ -16,22 +16,23 @@ style = "github-dark"
 [params]
   author = "nk"
   info = ""
+  dateFormat = "2006-01-02"
   description = "Personal website"
   keywords = "blog,developer,personal"
-  #avatarurl = "images/avatar.jpg"
+  avatarurl = "/images/icon_500.PNG"
   #gravatar = "john.doe@example.com"
 
-  faviconSVG = "/img/favicon.svg"
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
+  faviconSVG = "/imges/icon.svg"
+  favicon_16 = "/imges/favicon.ico"
+  favicon_32 = "/imges/favicon.ico"
   enableTwemoji = true
 
   colorScheme = "auto"
   hidecolorschemetoggle = false
 
-  # customCSS = ["css/custom.css"]
-  # customSCSS = ["scss/custom.scss"]
-  # customJS = ["js/custom.js"]
+  customCSS = []
+  customSCSS = []
+  customJS = []
 
 [taxonomies]
   category = "categories"
