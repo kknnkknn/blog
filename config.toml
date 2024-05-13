@@ -20,12 +20,12 @@ style = "github-dark"
   dateFormat = "2006-01-02"
   description = "Personal website"
   keywords = "blog,developer,personal"
-  avatarurl = "/images/icon_500.PNG"
+  avatarurl = "images/icon_500.PNG"
   #gravatar = "john.doe@example.com"
 
-  faviconSVG = "/imges/icon.svg"
-  favicon_16 = "/imges/favicon.ico"
-  favicon_32 = "/imges/favicon.ico"
+  faviconSVG = "/images/icon.svg"
+  favicon_16 = "/images/favicon.ico"
+  favicon_32 = "/images/favicon.ico"
   enableTwemoji = true
 
   colorScheme = "auto"
