@@ -9,6 +9,8 @@ paginate = 20
 colorScheme = "auto"
 
 [services]
+  [services.googleAnalytics]
+    ID = 'G-EM72XSTWPY'
 [services.disqus]
 
 [markup.highlight]
