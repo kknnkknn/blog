@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>___</title>
-    <link>https://kknnkknn.github.io/blog/</link>
-    <description>Recent content on ___</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Mon, 13 May 2024 23:10:18 +0900</lastBuildDate><atom:link href="https://kknnkknn.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>映画見た(『悪は存在しない』)</title>
-      <link>https://kknnkknn.github.io/blog/article/%E6%98%A0%E7%94%BB%E8%A6%8B%E3%81%9F%E6%82%AA%E3%81%AF%E5%AD%98%E5%9C%A8%E3%81%97%E3%81%AA%E3%81%84/</link>
-      <pubDate>Mon, 13 May 2024 23:10:18 +0900</pubDate>
-      
-      <guid>https://kknnkknn.github.io/blog/article/%E6%98%A0%E7%94%BB%E8%A6%8B%E3%81%9F%E6%82%AA%E3%81%AF%E5%AD%98%E5%9C%A8%E3%81%97%E3%81%AA%E3%81%84/</guid>
-      <description> 見た 見出しへのリンク 職場上がりに映画館に行って見た. 私は社会人学生なので学生料金で見ることができたはずだが,
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>___</title><link>https://kknnkknn.github.io/blog/</link><description>Recent content on ___</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 13 May 2024 23:10:18 +0900</lastBuildDate><atom:link href="https://kknnkknn.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>映画見た(『悪は存在しない』)</title><link>https://kknnkknn.github.io/blog/article/%E6%98%A0%E7%94%BB%E8%A6%8B%E3%81%9F%E6%82%AA%E3%81%AF%E5%AD%98%E5%9C%A8%E3%81%97%E3%81%AA%E3%81%84/</link><pubDate>Mon, 13 May 2024 23:10:18 +0900</pubDate><guid>https://kknnkknn.github.io/blog/article/%E6%98%A0%E7%94%BB%E8%A6%8B%E3%81%9F%E6%82%AA%E3%81%AF%E5%AD%98%E5%9C%A8%E3%81%97%E3%81%AA%E3%81%84/</guid><description> 見た 見出しへのリンク 職場上がりに映画館に行って見た. 私は社会人学生なので学生料金で見ることができたはずだが,
 学生証を忘れていたため一般料金を支払った. 数少ない社会人学生であるメリットが…
 感想 見出しへのリンク おおむね面白かった. 環境の変化でここ一年映画を全く見られていなかったため,
 単に劇場で映画を見るという体験が楽しかった. とはいえ作品自体も面白かったと思う.
@@ -35,27 +20,5 @@
 サスペンスやホラーの文脈っぽくみえてしまった.
 そう考えると滑稽で馬鹿な男性(同情には値する)が死ぬのは当然だ(死んでいるかは曖昧にされているけど)
 呑気にグランピングの管理人としてのセカンドライフを語りだす下りなんかは, よくある死亡フラグのそれにしか見えない.
-気持ち悪いショット 見出しへのリンク だるまさんが転んだのところ 鹿の骨目線のショット </description>
-    </item>
-    
-    <item>
-      <title>Blog作った</title>
-      <link>https://kknnkknn.github.io/blog/article/blog%E4%BD%9C%E3%81%A3%E3%81%9F/</link>
-      <pubDate>Wed, 08 May 2024 16:30:09 +0000</pubDate>
-      
-      <guid>https://kknnkknn.github.io/blog/article/blog%E4%BD%9C%E3%81%A3%E3%81%9F/</guid>
-      <description>Blog 作った 見出しへのリンク Output する場所用意しとくか, という気分になったので作った. こまめに更新したい.
-how 見出しへのリンク hugo + Github Pages でさらっとやった. 特にコメントすることなし.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://kknnkknn.github.io/blog/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kknnkknn.github.io/blog/about/</guid>
-      <description>Name 見出しへのリンク nk</description>
-    </item>
-    
-  </channel>
-</rss>
+気持ち悪いショット 見出しへのリンク だるまさんが転んだのところ 鹿の骨目線のショット</description></item><item><title>Blog作った</title><link>https://kknnkknn.github.io/blog/article/blog%E4%BD%9C%E3%81%A3%E3%81%9F/</link><pubDate>Wed, 08 May 2024 16:30:09 +0000</pubDate><guid>https://kknnkknn.github.io/blog/article/blog%E4%BD%9C%E3%81%A3%E3%81%9F/</guid><description>Blog 作った 見出しへのリンク Output する場所用意しとくか, という気分になったので作った. こまめに更新したい.
+how 見出しへのリンク hugo + Github Pages でさらっとやった. 特にコメントすることなし.</description></item><item><title/><link>https://kknnkknn.github.io/blog/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kknnkknn.github.io/blog/about/</guid><description>Name 見出しへのリンク nk</description></item></channel></rss>
