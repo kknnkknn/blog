@@ -1,9 +1,18 @@
+name: github pages   # ← 好きな名前でOK
+
+on:
+  push:
+    branches:
+      - source       # source ブランチに push されたら実行
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: source            # 明示しておくと安心
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -13,7 +22,7 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
