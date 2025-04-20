@@ -1,5 +1,5 @@
 baseurl = "https://kknnkknn.github.io/blog/"
-publishDir = "docs"
+publishDir = "public"
 title = "___"
 theme = "coder"
 languagecode = "ja"
