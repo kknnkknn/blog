@@ -40,15 +40,15 @@ Sedgewick & Wayne『Algorithms, 4th Edition』を参照。誤りがあれば�
 壊さずに高さを整えるために<strong>回転</strong>という操作を行う。
 AVL 木で実際に必要な回転は次の <strong>4 パターン</strong> だけ。</p><h3 id=ll右回転>LL（右回転）
 <a class=heading-link href=#ll%e5%8f%b3%e5%9b%9e%e8%bb%a2><i class="fa-solid fa-link" aria-hidden=true title=見出しへのリンク></i>
-<span class=sr-only>見出しへのリンク</span></a></h3><p><img src=/content/images/LL.png alt=LL.png></p><p>色付きのノードを右に回転する</p><ol><li>4 の左の子を 2 の右の部分木(3)につけ直す</li><li>2 をルートにして、4 を 2 の右の子として接続する</li><li>4 -> 2 の順に高さ/バランス係数を再計算する</li></ol><h3 id=rr左回転>RR（左回転）
+<span class=sr-only>見出しへのリンク</span></a></h3><p><img src=/public/images/LL.png alt=LL.png></p><p>色付きのノードを右に回転する</p><ol><li>4 の左の子を 2 の右の部分木(3)につけ直す</li><li>2 をルートにして、4 を 2 の右の子として接続する</li><li>4 -> 2 の順に高さ/バランス係数を再計算する</li></ol><h3 id=rr左回転>RR（左回転）
 <a class=heading-link href=#rr%e5%b7%a6%e5%9b%9e%e8%bb%a2><i class="fa-solid fa-link" aria-hidden=true title=見出しへのリンク></i>
 <span class=sr-only>見出しへのリンク</span></a></h3><p>LL(右回転)を逆にしただけ。
-<img src=/content/images/RR.png alt=RR.png>
+<img src=/public/images/RR.png alt=RR.png>
 手順は</p><ol><li>1 の右の子を 3 の左の部分木(2)につけ直す</li><li>3 をルートにして、1 を 3 の左の子として接続する</li><li>1 -> 3 の順に高さ/バランス係数を再計算する</li></ol><h3 id=lr左右回転>LR（左‑右回転）
 <a class=heading-link href=#lr%e5%b7%a6%e5%8f%b3%e5%9b%9e%e8%bb%a2><i class="fa-solid fa-link" aria-hidden=true title=見出しへのリンク></i>
 <span class=sr-only>見出しへのリンク</span></a></h3><p>左のノードの右部分木が伸びているパターン。
 １回右回転してLLのパターンにしてから左に回転してバランスを取る。
-<img src=/content/images/LR.png alt=LR.png></p><h3 id=rl右左回転>RL（右‑左回転）
+<img src=/public/images/LR.png alt=LR.png></p><h3 id=rl右左回転>RL（右‑左回転）
 <a class=heading-link href=#rl%e5%8f%b3%e5%b7%a6%e5%9b%9e%e8%bb%a2><i class="fa-solid fa-link" aria-hidden=true title=見出しへのリンク></i>
 <span class=sr-only>見出しへのリンク</span></a></h3><h2 id=実装c>実装(C++)
 <a class=heading-link href=#%e5%ae%9f%e8%a3%85c><i class="fa-solid fa-link" aria-hidden=true title=見出しへのリンク></i>
