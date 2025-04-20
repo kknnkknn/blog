@@ -28,7 +28,7 @@ Sedgewick & Wayne『Algorithms, 4th Edition』を参照。誤りがあれば�
 壊さずに高さを整えるために**回転**という操作を行う。
 AVL 木で実際に必要な回転は次の **4 パターン** だけ。
 ### LL（右回転）
-![LL.png](/content/images/LL.png)
+![LL.png](/public/images/LL.png)
 
 色付きのノードを右に回転する
 1. 4 の左の子を 2 の右の部分木(3)につけ直す
@@ -39,7 +39,7 @@ AVL 木で実際に必要な回転は次の **4 パターン** だけ。
 ### RR（左回転）
 
 LL(右回転)を逆にしただけ。
-![RR.png](/content/images/RR.png)
+![RR.png](/public/images/RR.png)
 手順は
 1. 1 の右の子を 3 の左の部分木(2)につけ直す
 2. 3 をルートにして、1 を 3 の左の子として接続する
@@ -48,7 +48,7 @@ LL(右回転)を逆にしただけ。
 ### LR（左‑右回転）
 左のノードの右部分木が伸びているパターン。
 １回右回転してLLのパターンにしてから左に回転してバランスを取る。
-![LR.png](/content/images/LR.png)
+![LR.png](/public/images/LR.png)
 ### RL（右‑左回転）
 
 ## 実装(C++)
