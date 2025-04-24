@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h1 class="text-2xl font-bold mb-6">{{ .Title | default "Articles" }}</h1>
+<ul class="list-none space-y-4">
+  {{ range .Pages.ByDate.Reverse }}
+    <li>
+      <span class="mr-3 text-neutral-500">{{ .Date.Format "2006-01-02" }}</span>
+      <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
+    </li>
+  {{ end }}
+</ul>
+{{ end }}
+

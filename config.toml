@@ -1,6 +1,6 @@
-baseurl = "https://kknnkknn.github.io/blog/"
+baseurl = "https://krnk0.github.io/blog/"
 publishDir = "public"
-title = "___"
+#title = "blog"
 theme = "minimal"
 languagecode = "ja"
 defaultcontentlanguage = "ja"
@@ -33,7 +33,6 @@ style = "github-dark"
   colorScheme = "auto"
   hidecolorschemetoggle = false
 
-  customCSS = ["css/custom.css"]
   customSCSS = []
   customJS = []
 
@@ -48,14 +47,14 @@ style = "github-dark"
   name = "Github"
   icon = "fa-brands fa-github fa-2x"
   weight = 1
-  url = "https://github.com/kknnkknn/"
+  url = "https://github.com/krnk0/"
 
 # Menu links
 [[menu.main]]
-  name = "Blog"
-  weight = 1
+  name = "Article"
+  weight = 20
   url  = "article/"
 [[menu.main]]
   name = "About"
-  weight = 2
+  weight = 20
   url = "about/"
