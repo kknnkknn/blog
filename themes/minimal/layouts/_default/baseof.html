@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja" class="scroll-smooth">
+  <head>
+    {{/* Basic meta */}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{/* Title: 
+         - Home: site title only
+         - Else: <page title> | <site title> */}}
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ printf "%s | %s" .Title .Site.Title }}{{ end }}</title>
+
+    {{/* Tailwind CSS via Hugo Pipes
+         - assets/css/main.css に @tailwind 指令を書いておく
+         - css.TailwindCSS は Hugo 0.128+ で呼び出し可 */}}
+    {{ $css := resources.Get "css/main.css" | css.TailwindCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+    {{/* Favicon */}}
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}">
+  </head>
+  <body class="bg-white text-neutral-900 font-sans leading-relaxed antialiased">
+    <header class="max-w-prose mx-auto px-4 py-6 text-sm">
+      <nav class="flex gap-6">
+        {{ range site.Menus.main }}
+          <a href="{{ .URL }}" class="hover:underline">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </header>
+
+    <main class="max-w-prose mx-auto px-4">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="max-w-prose mx-auto px-4 py-10 text-sm text-neutral-500">
+      © {{ now.Format "2006" }} {{ .Site.Title }}
+    </footer>
+
+    {{/* Optional: analytics or extra scripts go here */}}
+  </body>
+</html>

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ここにカスタム変数や @plugin, @theme などを書く */
+@plugin "@tailwindcss/typography";
+
