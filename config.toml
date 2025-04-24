@@ -1,7 +1,7 @@
 baseurl = "https://kknnkknn.github.io/blog/"
 publishDir = "public"
 title = "___"
-theme = "coder"
+theme = "minimal"
 languagecode = "ja"
 defaultcontentlanguage = "ja"
 

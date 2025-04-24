@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article>
+  <h1 class="text-3xl font-semibold mb-4">{{ .Title }}</h1>
+  <p class="text-sm text-neutral-500 mb-10">{{ .Date.Format "2006-01-02" }}</p>
+  <div class="prose prose-neutral max-w-none">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
