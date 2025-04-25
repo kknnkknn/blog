@@ -37,7 +37,7 @@ async function getAllPosts() {
 }
 
 /**
- * /blog/article/ – 記事一覧ページ
+ * /article/ – 記事一覧ページ
  * Hugo の minimal テーマと同じ「日付 + タイトル」1 行リスト
  */
 export const metadata = {
@@ -47,17 +47,19 @@ export const metadata = {
 export default async function ArticleIndex() {
   const posts = await getAllPosts()
   return (
-    <ul className="list-none space-y-4">
-      {posts.map((post) => (
-        <li key={post.slug}>
-          <span className="mr-3 text-neutral-500">
-            {new Date(post.date).toISOString().slice(0, 10)}
-          </span>
-          <Link href={`/blog/article/${post.slug}/`} className="hover:underline">
-            {post.title}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <main className="max-w-prose mx-auto px-4 py-10"> {/* ★ 中央寄せラッパー */}
+      <ul className="list-none space-y-4">
+        {posts.map((post) => (
+          <li key={post.slug}>
+            <span className="mr-3 text-neutral-500">
+              {new Date(post.date).toISOString().slice(0, 10)}
+            </span>
+            <Link href={`/article/${post.slug}/`} className="hover:underline">
+              {post.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </main>
   )
 }

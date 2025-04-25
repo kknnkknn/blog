@@ -3,7 +3,7 @@ export const metadata = { title: 'About' }
 
 export default function About() {
   return (
-    <article className="prose mx-auto px-4 py-10">
+    <article className="prose  prose-invert max-w-prose mx-auto px-4 py-10">
       <h1>About</h1>
       <p>
         <br />

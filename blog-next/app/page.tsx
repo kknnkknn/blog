@@ -1,6 +1,8 @@
+import Link from "next/link"
+
 // app/page.tsx  ← /blog/ に相当する
 export const metadata = {
-  title: 'nkʼs Blog',
+  title: 'Blog',
 }
 
 export default function Index() {
@@ -8,10 +10,10 @@ export default function Index() {
     <main className="max-w-prose mx-auto px-4 py-10">
       <ul className="space-y-4 text-lg">
         <li>
-          <a href="/blog/about/" className="hover:underline">About</a>
+          <Link href="/about/" className="hover:underline">About</Link>
         </li>
         <li>
-          <a href="/blog/article/" className="hover:underline">Articles</a>
+          <Link href="/article/" className="hover:underline">Articles</Link>
         </li>
       </ul>
     </main>

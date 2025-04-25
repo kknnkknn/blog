@@ -8,13 +8,17 @@ import remarkRehype from 'remark-rehype'
 import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 import { notFound } from 'next/navigation'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeExtLinks from 'rehype-external-links'
+import rehypePrism from 'rehype-prism-plus'
 import 'katex/dist/katex.min.css'
 
 /**
  * Markdown -> HTML 変換し、メタ情報を返す
  */
 async function loadPost(slug: string) {
-  const dir = path.join(process.cwd(), 'app', 'article')
+  const dir = path.join(process.cwd(), 'content', 'article')
   const tryRead = async (ext: string) => {
     try {
       return await fs.readFile(path.join(dir, `${slug}.${ext}`), 'utf8')
@@ -26,13 +30,18 @@ async function loadPost(slug: string) {
   if (!src) return null
 
   const { data, content } = matter(src)
-  const html = await remark()
-    .use(remarkGfm)
-    .use(remarkMath)
-    .use(remarkRehype)
-    .use(rehypeKatex)
-    .use(rehypeStringify)
-    .process(content)
+
+const html = await remark()
+  .use(remarkGfm)
+  .use(remarkMath)
+  .use(remarkRehype)
+  .use(rehypeKatex)
+  .use(rehypeSlug)
+  .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
+  .use(rehypeExtLinks, { target: '_blank', rel: ['noopener'] })
+  .use(rehypePrism)
+  .use(rehypeStringify)
+  .process(content)
 
   return {
     title: data.title as string,
@@ -60,15 +69,12 @@ export default async function Page({ params }: { params: Params }) {
   if (!post) return notFound()
 
   return (
-    <article>
-      <h1 className="text-3xl font-semibold mb-4">{post.title}</h1>
+    <article className="prose prose-invert max-w-prose mx-auto px-4 py-10">
+      <h1 className="mb-4">{post.title}</h1>
       <p className="text-sm text-neutral-500 mb-10">
         {new Date(post.date).toISOString().slice(0, 10)}
       </p>
-      <div
-        className="prose prose-neutral max-w-none"
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </article>
   )
 }
