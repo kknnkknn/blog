@@ -1,71 +1,12 @@
-import fs from 'node:fs/promises'
-import path from 'node:path'
-import matter from 'gray-matter'
-import { remark } from 'remark'
-import remarkGfm from 'remark-gfm'
-import remarkMath from 'remark-math'
-import remarkRehype from 'remark-rehype'
-import rehypeKatex from 'rehype-katex'
-import rehypeStringify from 'rehype-stringify'
 import { notFound } from 'next/navigation'
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeExtLinks from 'rehype-external-links'
-import rehypePrism from 'rehype-prism-plus'
 import 'katex/dist/katex.min.css'
-
-/**
- * Markdown -> HTML 変換し、メタ情報を返す
- */
-async function loadPost(slug: string) {
-  const dir = path.join(process.cwd(), 'content', 'article')
-  const tryRead = async (ext: string) => {
-    try {
-      return await fs.readFile(path.join(dir, `${slug}.${ext}`), 'utf8')
-    } catch {
-      return undefined
-    }
-  }
-  const src = (await tryRead('md')) ?? (await tryRead('mdx'))
-  if (!src) return null
-
-  const { data, content } = matter(src)
-
-const html = await remark()
-  .use(remarkGfm)
-  .use(remarkMath)
-  .use(remarkRehype)
-  .use(rehypeKatex)
-  .use(rehypeSlug)
-  .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
-  .use(rehypeExtLinks, { target: '_blank', rel: ['noopener'] })
-  .use(rehypePrism)
-  .use(rehypeStringify)
-  .process(content)
-
-  return {
-    title: data.title as string,
-    date: data.date as string,
-    html: String(html),
-  }
-}
-
-/**
- * 記事 slug を静的パラメータで列挙
- */
-export async function generateStaticParams() {
-  const dir = path.join(process.cwd(), 'content', 'article')
-  const files = await fs.readdir(dir)
-  return files
-    .filter((f) => /\.mdx?$/.test(f))
-    .map((f) => ({ slug: f.replace(/\.(md|mdx)$/, '') }))
-}
+import { parseMarkdown } from '@/lib/markdown'
 
 type Params = Promise<{ slug: string }>
 
 export default async function Page({ params }: { params: Params }) {
   const { slug } = await params
-  const post = await loadPost(slug)
+  const post = await parseMarkdown(slug)
   if (!post) return notFound()
 
   return (
